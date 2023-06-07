@@ -23,3 +23,11 @@ group by GENDER_CODE_ID;
 -- from orders as t_ors
 -- where t_ors.EmployeeID in (7,9)
 -- group by t_ors.EmployeeID;
+
+-- SELECT COUNT(*) AS EMPLOYEE_CNT, T_OUTER_ORS.EmployeeID
+-- FROM (
+--      SELECT T_INNER_ORS.*
+--      FROM ORDERS AS T_INNER_ORS
+--      WHERE T_INNER_ORS.EmployeeID IN (7,9)
+--     ) AS T_OUTER_ORS
+-- GROUP BY T_OUTER_ORS.EmployeeID;
