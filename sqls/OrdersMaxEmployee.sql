@@ -8,3 +8,7 @@ from
     group by emp.EmployeeID
 )
 as cnt;
+
+-- Number of Records: 1
+-- max_total_ord	LastName	FirstName
+-- 40	Peacock	Margaret
