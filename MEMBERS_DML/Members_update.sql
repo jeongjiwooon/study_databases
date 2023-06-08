@@ -4,7 +4,7 @@
 
 -- update members
 -- set age = 29
--- where age in (30, 32);
+-- where name = '홍길동';
 
 select *
 from members

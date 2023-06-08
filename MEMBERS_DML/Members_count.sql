@@ -32,19 +32,19 @@
 --     ) AS T_OUTER_ORS
 -- GROUP BY T_OUTER_ORS.EmployeeID;
 
-select count(*) as category_count, out_category.categoryname
-from (
-	 select category.*
-	 from categories as category
-     where category.categoryname in ('produce', 'beverages')
-     )
-     as out_category
-     group by out_category.categoryname;
-     
-SELECT COUNT(*) AS CATN, OUT_CAT.CategoryName
-FROM (
-		SELECT CAT.*
-		FROM Categories AS CAT
-		WHERE CAT.CategoryName IN ('Produce','Beverages')
-) AS OUT_CAT
-GROUP BY OUT_CAT.CategoryName;
+-- select count(*) as category_count, out_category.categoryname
+-- from (
+-- 	 select category.*
+-- 	 from categories as category
+--      where category.categoryname in ('produce', 'beverages')
+--      )
+--      as out_category
+--      group by out_category.categoryname;
+--      
+-- SELECT COUNT(*) AS CATN, OUT_CAT.CategoryName
+-- FROM (
+-- 		SELECT CAT.*
+-- 		FROM Categories AS CAT
+-- 		WHERE CAT.CategoryName IN ('Produce','Beverages')
+-- ) AS OUT_CAT
+-- GROUP BY OUT_CAT.CategoryName;

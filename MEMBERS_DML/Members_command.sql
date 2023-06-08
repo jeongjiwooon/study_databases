@@ -9,6 +9,11 @@
 -- where AGE not in (32, 28)
 -- order by AGE desc ;
 
+-- select animal_id
+-- from animal_ins
+-- where name is null
+-- order by animal_id;
+
 -- select *
 -- from members
 -- where age between 25 and 35
@@ -17,6 +22,11 @@
 -- select *
 -- from db_members.members
 -- where name != '홍길동' ;
+
+-- select name
+-- from animal_ins
+-- order by datetime
+-- limit 1;
 
 -- select *
 -- from members
@@ -85,3 +95,6 @@ GROUP BY T_MEMB.AGE ) AS T_INNER_MEMB;
 -- FROM members as T_MEMB
 -- GROUP BY T_MEMB.AGE ;
 
+select count(category.num) as cnt_category, category.num
+from Products as category.num
+group by category.num;
