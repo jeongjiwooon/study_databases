@@ -10,9 +10,9 @@
 -- where GENDER_CODE_ID = 'G-04'
 -- group by MEMBERS_ID;
 
-select count(*), GENDER_CODE_ID, min(NAME)
-from members
-group by GENDER_CODE_ID;
+-- select count(*), GENDER_CODE_ID, min(NAME)
+-- from members
+-- group by GENDER_CODE_ID;
 
 -- select EmployeeID, count(*) as count_orders
 -- from orders
@@ -31,3 +31,20 @@ group by GENDER_CODE_ID;
 --      WHERE T_INNER_ORS.EmployeeID IN (7,9)
 --     ) AS T_OUTER_ORS
 -- GROUP BY T_OUTER_ORS.EmployeeID;
+
+select count(*) as category_count, out_category.categoryname
+from (
+	 select category.*
+	 from categories as category
+     where category.categoryname in ('produce', 'beverages')
+     )
+     as out_category
+     group by out_category.categoryname;
+     
+SELECT COUNT(*) AS CATN, OUT_CAT.CategoryName
+FROM (
+		SELECT CAT.*
+		FROM Categories AS CAT
+		WHERE CAT.CategoryName IN ('Produce','Beverages')
+) AS OUT_CAT
+GROUP BY OUT_CAT.CategoryName;
