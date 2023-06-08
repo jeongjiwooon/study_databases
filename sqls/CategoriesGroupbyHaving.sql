@@ -3,7 +3,6 @@ from Products as category
 group by category.categoryid
 having count(category.categoryid) >= 10;
 -- Number of Records: 5
--- Number of Records: 5
 -- cnt_category	CategoryID
 -- 12	1
 -- 12	2
